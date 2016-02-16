@@ -1,0 +1,5 @@
+project: mydll_dependencies {
+    includes += $(MYDLL_PRJ_ROOT)/include
+    libpaths += $(MYDLL_PRJ_ROOT)/lib
+    libs += mydll
+}

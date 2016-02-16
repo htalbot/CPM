@@ -1,0 +1,14 @@
+#ifndef __CPMEVENTRAISER_EVC_H__
+#define __CPMEVENTRAISER_EVC_H__
+
+#include "BasicEventHandling/BasicEventHandling.h"
+
+BEGIN_EVENT_DECL_NAMESPACE(CPMEventRaiserEvents)
+	STATIC_EVENT_DECL(ev_cpm_event_handler_plugin_id_env_var_not_defined)
+	STATIC_EVENT_DECL(ev_event_handler_plugin_library_loading_failure)
+	STATIC_EVENT_DECL(ev_event_handler_object_creation_failure)
+	STATIC_EVENT_DECL(ev_init_plugin_failure)
+END_EVENT_NAMESPACE()
+
+
+#endif // __CPMEVENTRAISER_EVC_H__

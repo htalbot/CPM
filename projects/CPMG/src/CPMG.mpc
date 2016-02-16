@@ -1,0 +1,9 @@
+project: CPMG_ex, CPMG_fit {
+
+    after = CPMM
+
+    specific(prop:microsoft) {
+        unicode = 1
+        macros += wxHAS_MODE_T
+    }
+}

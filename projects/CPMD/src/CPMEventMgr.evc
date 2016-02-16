@@ -1,0 +1,13 @@
+
+#include "CPMD/CPMEventMgr.evc.h"
+
+BEGIN_EVENT_DEF_NAMESPACE(CPMEventMgrEvents)
+    STATIC_EVENT_DEF(ev_cpm_log_dir_env_var_not_defined, 1, "CPM_LOG_DIR environment variable is not defined.")
+    STATIC_EVENT_DEF(ev_modulename_reading_failure, 2, "Can't get module file name.")
+    STATIC_EVENT_DEF(ev_log_file_initialization_failure, 10, "Can't inititialize log file: '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_logging_failure, 11, "Can't log this entry: \"%1(%s)\"")
+    STATIC_EVENT_DEF(ev_expand_env_var_failure, 12, "Can't expand environment variable: \"%1(%s)\"")
+    STATIC_EVENT_DEF(ev_new_ace_message_block_failure, 13, "new ACE_Message_Block failure.")
+    STATIC_EVENT_DEF(ev_signal_rejected, 14, "Signal rejected: '%1(%s)' (because msg_queue is full).")
+END_EVENT_NAMESPACE()
+

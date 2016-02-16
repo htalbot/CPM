@@ -1,0 +1,45 @@
+#ifndef __CPMUTILS_EVC_H__
+#define __CPMUTILS_EVC_H__
+
+#include "BasicEventHandling/BasicEventHandling.h"
+
+BEGIN_EVENT_DECL_NAMESPACE(CPMUtilsEvents)
+    STATIC_EVENT_DECL(ev_env_var_not_defined)
+    STATIC_EVENT_DECL(ev_cwd_failure)
+    STATIC_EVENT_DECL(ev_chdir_failure)
+    STATIC_EVENT_DECL(ev_chdir_back_failure)
+    STATIC_EVENT_DECL(ev_getting_dir_content_failure)
+    STATIC_EVENT_DECL(ev_getting_file_status_failure)
+    STATIC_EVENT_DECL(ev_expand_env_var_failure)
+    STATIC_EVENT_DECL(ev_getting_corba_reference_failure)
+    STATIC_EVENT_DECL(ev_getting_settings_from_cpmm_failure)
+    STATIC_EVENT_DECL(ev_getting_node_from_map_failure)
+    STATIC_EVENT_DECL(ev_bad_format)
+    STATIC_EVENT_DECL(ev_getting_port_failure)
+    STATIC_EVENT_DECL(ev_getting_corbaloc_node_port_from_map_failure)
+    STATIC_EVENT_DECL(ev_init_child_poa_failure)
+    STATIC_EVENT_DECL(ev_init_orb_manager_failure)
+    STATIC_EVENT_DECL(ev_init_orb_manager_orb_nul)
+    STATIC_EVENT_DECL(ev_getting_system_processes_list_failure)
+    STATIC_EVENT_DECL(ev_windows_enumprocess_failure)
+    STATIC_EVENT_DECL(ev_getting_process_name_failure)
+    STATIC_EVENT_DECL(ev_windows_getmodule_name_failure)
+    STATIC_EVENT_DECL(ev_process_not_found)
+    STATIC_EVENT_DECL(ev_spawning_process_failure)
+    STATIC_EVENT_DECL(ev_ending_failure)
+    STATIC_EVENT_DECL(ev_getting_cpmm_node_failure)
+    STATIC_EVENT_DECL(ev_getting_cpmd_port_failure)
+    STATIC_EVENT_DECL(ev_getting_cpmm_port_failure)
+    STATIC_EVENT_DECL(ev_bad_console_value)
+    STATIC_EVENT_DECL(ev_cpmm_not_started_because_not_master)
+    STATIC_EVENT_DECL(ev_processes_snapshot_failure)
+    STATIC_EVENT_DECL(ev_retreiving_first_processes_failure)
+    STATIC_EVENT_DECL(ev_process_already_spawned)
+    STATIC_EVENT_DECL(ev_process_not_started)
+    STATIC_EVENT_DECL(ev_getting_object_location_failure)
+    STATIC_EVENT_DECL(ev_stopping_process_exception)
+    STATIC_EVENT_DECL(ev_non_stopped_processes)
+END_EVENT_NAMESPACE()
+
+
+#endif // __CPMUTILS_EVC_H__

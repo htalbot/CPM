@@ -1,0 +1,5 @@
+project: test_mydll_ex, test_mydll_fit_static {
+
+    exename = test_mydll_static
+
+}

@@ -1,0 +1,25 @@
+
+#ifndef __CPMEVENTHANDLERABSTRACT_VERSION_H__
+#define __CPMEVENTHANDLERABSTRACT_VERSION_H__
+
+#define CPMEVENTHANDLERABSTRACT_MAJOR 2
+#define CPMEVENTHANDLERABSTRACT_MINOR 2
+#define CPMEVENTHANDLERABSTRACT_PATCH 0
+
+
+#if defined _MSC_VER
+#   ifdef _DEBUG
+        const char CPMEVENTHANDLERABSTRACT_DebugFlag[] = "DEBUG";
+#   else
+        const char CPMEVENTHANDLERABSTRACT_DebugFlag[] = "RELEASE";
+#   endif
+#else
+#   ifdef DEBUG
+        const char CPMEVENTHANDLERABSTRACT_DebugFlag[] = "DEBUG";
+#   else
+        const char CPMEVENTHANDLERABSTRACT_DebugFlag[] = "RELEASE";
+#   endif
+#endif
+
+
+#endif // __CPMEVENTHANDLERABSTRACT_VERSION_H__

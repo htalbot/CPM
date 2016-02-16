@@ -1,0 +1,7 @@
+
+#include "CPMCore/CPMSettingsCatch.evc.h"
+
+BEGIN_EVENT_DEF_NAMESPACE(CPMSettingsCatchEvents)
+    STATIC_EVENT_DEF(ev_settings_failure, 1, "Settings failure: '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_libconfig_setting_field_not_found, 2, "Field not found/Bad format: '%1(%s)'.")
+END_EVENT_NAMESPACE()

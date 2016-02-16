@@ -1,0 +1,18 @@
+Template exe
+------------
+
+CPMDService a été développé mais ne doit pas être utilisé.
+
+On le garde pour démontrer ses lacunes et pour éviter de le développer
+à nouveau et se rendre compte, encore une fois, de ses limites.
+
+    - les process ne peuvent plus être vus par TaskManager. Il faut utiliser
+      ProcessExplorer (anciennement de Sysinternals).
+
+    - les process sont enfants du service ce qui fait que la fonction
+      CPMBase_ns::CPMBase::get_system_processes_list() ne voit plus les
+      process en cours et lors de l'arrêt du service, l'attente pour l'arrêt
+      de CPMM ne se termine jamais.
+
+    - des tests ont été faits avec les "creationflags" CREATE_NEW_CONSOLE,
+      DETACHED_PROCESS, CREATE_NEW_PROCESS_GROUP sans succès.

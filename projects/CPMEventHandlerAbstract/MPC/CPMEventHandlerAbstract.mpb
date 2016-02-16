@@ -1,0 +1,3 @@
+project: CPMEventHandlerAbstract_dependencies {
+    includes += $(CPMEVENTHANDLERABSTRACT_PRJ_ROOT)/include
+}

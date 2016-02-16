@@ -1,0 +1,5 @@
+project: CPMObjDummy_dependencies {
+    includes += $(CPMOBJDUMMY_PRJ_ROOT)/include
+    libpaths += $(CPMOBJDUMMY_PRJ_ROOT)/lib
+    libs += CPMObjDummy
+}

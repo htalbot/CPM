@@ -1,0 +1,5 @@
+project: ICPM_dependencies {
+    includes += $(ICPM_PRJ_ROOT)/include
+    libpaths += $(ICPM_PRJ_ROOT)/lib
+    libs += ICPM
+}

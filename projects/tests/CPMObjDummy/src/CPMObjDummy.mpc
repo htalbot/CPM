@@ -1,0 +1,4 @@
+project: CPMObjDummy_ex, CPMObjDummy_fit {
+
+    dynamicflags = CPMOBJDUMMY_BUILD_DLL
+}

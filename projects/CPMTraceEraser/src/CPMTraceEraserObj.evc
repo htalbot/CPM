@@ -1,0 +1,10 @@
+
+#include "CPMTraceEraser/CPMTraceEraserObj.evc.h"
+
+BEGIN_EVENT_DEF_NAMESPACE(CPMTraceEraserObjEvents)
+    STATIC_EVENT_DEF(ev_env_var_load_failure, 1, "Failed to load env. var. '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_libconfig_setting_field_not_found, 2, "Settings field not found: '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_getting_dir_content_failure, 9, "Can't get directory content (ACE_Dirent::open()) from '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_getting_file_status_failure, 10, "Can't get file status (ACE_OS::lstat()) from '%1(%s)/%2(%s)'.")
+END_EVENT_NAMESPACE()
+

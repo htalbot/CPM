@@ -1,0 +1,5 @@
+project: CPMCore_dependencies {
+    includes += $(CPMCORE_PRJ_ROOT)/include
+    libpaths += $(CPMCORE_PRJ_ROOT)/lib
+    libs += CPMCore
+}

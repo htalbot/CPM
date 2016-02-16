@@ -1,0 +1,10 @@
+
+#include "CPMCore/CPMEventRaiser.evc.h"
+
+BEGIN_EVENT_DEF_NAMESPACE(CPMEventRaiserEvents)
+	STATIC_EVENT_DEF(ev_cpm_event_handler_plugin_id_env_var_not_defined, 1, "CPM_EVENT_HANDLER_PLUGIN_ID environment variable is not defined.")
+	STATIC_EVENT_DEF(ev_event_handler_plugin_library_loading_failure, 2, "Can't load event handler plugin library: '%1(%s)'.")
+	STATIC_EVENT_DEF(ev_event_handler_object_creation_failure, 3, "Can't create event handler object from '%1(%s)'.")
+	STATIC_EVENT_DEF(ev_init_plugin_failure, 4, "Can't initialize plugin '%1(%s)'.")
+END_EVENT_NAMESPACE()
+

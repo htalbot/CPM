@@ -1,0 +1,7 @@
+project: CPMTraceEraser_ex {
+//    macros += wxHAS_MODE_T
+//    macros += CPMPROCESS_WX
+//    specific(prop:microsoft) {
+//        unicode = 1
+//    }
+}

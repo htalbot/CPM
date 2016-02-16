@@ -1,0 +1,5 @@
+project: CPMEventHandlerMgr_dependencies {
+    includes += $(CPMEVENTHANDLERMGR_PRJ_ROOT)/include
+    libpaths += $(CPMEVENTHANDLERMGR_PRJ_ROOT)/lib
+    libs += CPMEventHandlerMgr
+}

@@ -1,0 +1,140 @@
+#include "IBasicEventCorba/IBasicEventCorba.idl"
+
+module ICPM_module
+{
+
+    //*******************************************
+    // Definition of a process.
+    struct ProcessDef
+    {
+        string node_id;         // The node where the CPM process lives.
+        string process_id;      // Unique identifier.
+        string env_var_id;      // Env. var. identifying Production or development path.
+        string module_name;     // Module name of the CPM process (executable).
+        string port_number;     // IP port.
+        boolean enabled;        // To be launched (true) or not (false).
+        string console;         // hide/show its' own console or run into CPMD console 
+    };
+
+
+    //*******************************************
+    typedef sequence<ProcessDef> ProcessSeq;
+
+
+    //*******************************************
+    // Definition of a node.
+    struct NodeDef
+    {
+        string node_id;         // Usually, IP address.
+        ProcessSeq processes;   // CPM Process list to run on this node.
+        boolean enabled;        // To launch (true) or not (false).
+        string env_var;
+    };
+
+
+    //*******************************************
+    typedef sequence<NodeDef> NodeSeq;
+
+
+    //*******************************************
+    // Definition of CPMM settings.
+    struct CPMMSettingsStartup
+    {
+        boolean auto_launch_processes;  // Launch CPM processes when CPMM starts.
+        long required_time_before_stop_since_start_ms;
+    };
+
+
+    struct CPMMSettings
+    {
+        string settings_id;             // Unique identifier for settings.
+        CPMMSettingsStartup startup;    // Startup fields.
+        NodeSeq nodes;                  // Sequence of nodes.
+    };
+
+
+    //*******************************************
+    // Object description.
+    struct ObjectDesc
+    {
+        string object_id;               // Unique identifier for object.
+        long status;                    // Initialized or not and maybe more.
+    };
+
+    //*******************************************
+    typedef sequence<ObjectDesc> ObjectDescSeq;
+
+
+    //*******************************************
+    // Interface of CPMO hosted by each CPM 
+    // process.
+    interface ICPMProcess
+    {
+        void object_list(out ObjectDescSeq list);   // Provides list of object id.
+        void ctrl_end();                            // Ask to terminate CPM process.
+        void ctrl_ping();                           // Watchdog.
+        void show_console(in boolean show);
+        void show_gui(in boolean show);
+        void as_server(in boolean flag);
+        void as_gui(in boolean flag);
+        long getpid();
+    };
+
+
+    //*******************************************
+    // Interface of the CPM daemon
+    // (Corba Process Management Deamon).
+    interface ICPMD
+    {
+        boolean start(in ProcessSeq procs);     // Start processes.
+        boolean stop(in ProcessSeq procs);      // Stop processes.
+        void show_console(in ProcessSeq procs, in boolean show); // Show/hide console
+        void show_gui(in ProcessSeq procs, in boolean show); // Show/hide console
+        void get_launched_processes(out ProcessSeq processes);
+        void on_new_getting_reference_timeout(in long loop_timeout_ms, in long attempts);
+    };
+
+
+    //*******************************************
+    // Interface of object hosted by each
+    // CPM process.
+    interface ICPMObject
+    {
+        void get_version(out long major, out long minor, out long patch);
+        void ctrl_ping();       // Watchdog.            
+    };
+
+
+    //*******************************************
+    // Unavailable element.
+    struct UnavailableElementID
+    {
+        string element_id;      // Unavailable node or process.
+    };
+
+    //*******************************************
+    typedef sequence<UnavailableElementID> UnavailableElementIDSeq;
+
+    //*******************************************
+    // Interface of the object CPMM
+    // (Corba Process Management Master).
+    interface ICPMM
+    {
+        void get_settings(out CPMMSettings initial, out CPMMSettings current, out string current_settings_file);   // Current configuration
+        boolean start(in ProcessSeq procs);                     // Start processes
+        boolean stop(in ProcessSeq procs);                      // Stop processes
+        void show_console(in ProcessSeq procs, in boolean show); // Show/hide console
+        void show_gui(in ProcessSeq procs, in boolean show); // Show/hide console
+        boolean started();                                      // returns the status (started/not started)
+        boolean get_unavailable(out UnavailableElementIDSeq nodes, out UnavailableElementIDSeq processes);          
+        void update_settings(in CPMMSettings new_initial_settings, in CPMMSettings new_current_settings, in string file);
+        boolean save_settings_to(in string target_file);
+        boolean set_as_default();
+    };
+
+    //*******************************************
+    interface ICPMEventMgr: ICPMObject
+    {
+        void push(in IBASICEVENTCORBA_module::BasicEventCorba event);
+    };
+};

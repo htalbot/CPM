@@ -1,0 +1,22 @@
+
+#include "CPMTraceEraser/CPMTraceEraser.evc.h"
+
+BEGIN_EVENT_DEF_NAMESPACE(CPMTraceEraserEvents)
+    STATIC_EVENT_DEF(ev_missing_arg, 1, "Missing argument: '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_arg_parsing_failure, 2, "Parse error (unknown arg): '%1(%d)'.")
+    STATIC_EVENT_DEF(ev_app_layer_failure, 3, "CPMBarAppLayer failed.")
+    STATIC_EVENT_DEF(ev_tao_layer_init_failure, 4, "CPMBarTAOLayer initialization failure.")
+    STATIC_EVENT_DEF(ev_object_registration_with_ior_table_failure, 5, "Can't register corba object with IORTable. Object: '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_server_started, 6, "%1(%s) server started, waiting for requests...")
+    STATIC_EVENT_DEF(ev_object_registration_with_ior_table_failure2, 7, "Can't register corba object with IORTable.")
+    STATIC_EVENT_DEF(ev_object_init_failure, 8, "Object initialization failure.")
+    STATIC_EVENT_DEF(ev_server_stopped, 9, "%1(%s) server stopped.")
+    STATIC_EVENT_DEF(ev_main_exception, 10, "%1(%s) - main exception.")
+    STATIC_EVENT_DEF(ev_singleton_close_exception, 11, "%1(%s) - exception while singleton was closing.")
+    STATIC_EVENT_DEF(ev_server_already_running, 12, "Server %1(%s) is already running.")
+    STATIC_EVENT_DEF(ev_bad_parameters, 13, "Bad paremters (%1(%s)) when starting server %2(%s).")
+    STATIC_EVENT_DEF(ev_cant_add_option, 14, "Can't add ACE_Get_Option (%1(%s)).")
+    STATIC_EVENT_DEF(ev_args_parsing_failure, 15, "Arguments parsing failure.")
+    STATIC_EVENT_DEF(ev_corba_objects_init_failure, 16, "Corba objects initialization failure.")
+END_EVENT_NAMESPACE()
+

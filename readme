@@ -1,0 +1,23 @@
+CPM means Corba Process Management.
+
+Opposed to DCOM with which a server is launched when we get reference on an
+object hosted by the server, Corba process must be launched explicitely before
+using an object.
+
+CPM defines Corba processes intervening in a system and launch them. It is
+some kind of repository implementation.
+
+
+CPM has been generated with DPO (https://github.com/htalbot/DPOpp)
+
+- Generate projects/solution with dpo.pl
+
+    Note: I put TAO_CodecFactory, TAO_CodecFactoryd, TAO_SvcUtils,
+    TAO_SvcUtilsd, TAO_PI, TAO_PId, TAO_ValueType and TAO_ValueTyped in runtime
+    dependencies because they can't be fetched from dependencies by DPO.
+
+- Build
+
+- To push it into a pool, freeze it with dpo.pl (https://github.com/htalbot/DPOpp)
+
+

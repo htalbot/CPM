@@ -1,0 +1,11 @@
+
+#include "CPMEventHandlerMgr/CPMEventHandlerMgr.evc.h"
+
+BEGIN_EVENT_DEF_NAMESPACE(CPMEventHandlerMgrEvents)
+    STATIC_EVENT_DEF(ev_orb_init_failure, 1, "ORB initialization failure.")
+    STATIC_EVENT_DEF(ev_env_var_not_defined, 2, "Environment variable not defined '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_getting_reference_on_corba_object_failure, 3, "Can't get reference on corba object '%1(%s)'.")
+    STATIC_EVENT_DEF(ev_pushing_event_to_cpm_event_mgr_failure, 4, "Can't push event to CPMEventMgr. The next event (event_id = %1(%d)) is the not reported event.")
+    STATIC_EVENT_DEF(ev_converting_basicevent_to_corbaevent_failure, 5, "Can't convert BasicEventHandling::BasicEvent to BasicEventCorba: '%1(%s):%2(%d)'.")
+END_EVENT_NAMESPACE()
+

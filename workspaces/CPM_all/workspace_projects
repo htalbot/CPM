@@ -1,0 +1,15 @@
+CPMEventHandlerAbstract
+ICPM
+CPMCore
+CPMD
+CPMM
+CPMG
+CPMEventHandlerMgr
+CPMFoo
+CPMProcWx
+CPMObjDummy
+CPMBar
+test_CPMEventRaiser
+CPMPlayer
+CPMTraceEraser
+CPMDService

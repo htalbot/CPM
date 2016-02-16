@@ -1,0 +1,6 @@
+
+#include "CPMG/CPMG.evc.h"
+
+BEGIN_EVENT_DEF_NAMESPACE(CPMGEvents)
+END_EVENT_NAMESPACE()
+

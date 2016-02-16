@@ -1,0 +1,5 @@
+project : ICPM_ex, ICPM_fit {
+
+    dynamicflags = ICPM_BUILD_DLL
+    idlflags += -Wb,export_macro=ICPM_Export -Wb,export_include=ICPM_Export.h -GT
+}

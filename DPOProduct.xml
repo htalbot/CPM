@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DPOProduct.xsd">
+  <Name>CPM</Name>
+  <Version>2.2.0</Version>
+  <Flavour>vanilla</Flavour>
+  <DPOCompliant>
+    <Value>1</Value>
+    <NonCompliantLibSeq/>
+  </DPOCompliant>
+  <Runtime>
+    <RuntimeProductCompliantSeq/>
+    <RuntimeProductNonCompliantSeq>
+      <ProductNonCompliant>
+        <Name>ACE</Name>
+        <Version>6.3.1</Version>
+        <Flavour>vanilla</Flavour>
+        <Modules>
+          <ModuleName>TAO_CodecFactory.dll</ModuleName>
+          <ModuleName>TAO_CodecFactoryd.dll</ModuleName>
+          <ModuleName>TAO_PI.dll</ModuleName>
+          <ModuleName>TAO_PId.dll</ModuleName>
+          <ModuleName>TAO_Svc_Utils.dll</ModuleName>
+          <ModuleName>TAO_Svc_Utilsd.dll</ModuleName>
+          <ModuleName>TAO_Valuetype.dll</ModuleName>
+          <ModuleName>TAO_Valuetyped.dll</ModuleName>
+        </Modules>
+      </ProductNonCompliant>
+    </RuntimeProductNonCompliantSeq>
+  </Runtime>
+  <MPCIncludes></MPCIncludes>
+  <FreezeDirectory>thirdparty/htalbot</FreezeDirectory>
+</Product>

@@ -1,0 +1,13 @@
+Template exe
+------------
+
+DPO tends to use at least two source files for executables. The first one
+being CPMPlayer.cpp and the second one being CPMPlayerAppLayer.cpp.
+
+CPMPlayer.cpp contains bootstrap of application while CPMPlayerAppLayer.cpp contains
+everything related to the application itself.
+
+This is only one approach among many others...
+
+After applying modifications according to the needs, this project
+just have to be built and tested by launching it.

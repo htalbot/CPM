@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DPOProject.xsd">
+  <Name>CPMPlayer</Name>
+  <Version>2.2.0</Version>
+  <TargetVersion>2.2.0</TargetVersion>
+  <Type>0</Type>
+  <TestAppOf></TestAppOf>
+  <DPOCompliant>
+    <Value>1</Value>
+    <ProductName>CPM</ProductName>
+    <ProductFlavour>vanilla</ProductFlavour>
+    <MPB></MPB>
+    <MPCIncludes></MPCIncludes>
+  </DPOCompliant>
+  <Dependencies_when_dynamic>
+    <ProjectDependency>
+      <Name>CPMCore</Name>
+      <Version>2.2.0</Version>
+      <TargetVersion>2.2.0</TargetVersion>
+      <Type>6</Type>
+      <DPOCompliant>
+        <Value>1</Value>
+        <ProductName>CPM</ProductName>
+        <ProductFlavour>vanilla</ProductFlavour>
+        <MPB></MPB>
+        <MPCIncludes></MPCIncludes>
+      </DPOCompliant>
+    </ProjectDependency>
+  </Dependencies_when_dynamic>
+  <Dependencies_when_static>
+    <ProjectDependency>
+      <Name>CPMCore</Name>
+      <Version>2.2.0</Version>
+      <TargetVersion>2.2.0</TargetVersion>
+      <Type>6</Type>
+      <DPOCompliant>
+        <Value>1</Value>
+        <ProductName>CPM</ProductName>
+        <ProductFlavour>vanilla</ProductFlavour>
+        <MPB></MPB>
+        <MPCIncludes></MPCIncludes>
+      </DPOCompliant>
+    </ProjectDependency>
+  </Dependencies_when_static>
+</Project>
