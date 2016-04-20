@@ -40,6 +40,10 @@ project : xyz_dependencies {
         *.h
     }
 
+    Source_Files {
+        ^main.cpp
+    }
+
     Documentation_Files {
         ../doc/*
     }
